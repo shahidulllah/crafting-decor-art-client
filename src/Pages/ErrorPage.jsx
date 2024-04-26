@@ -13,14 +13,13 @@ const ErrorPage = () => {
                             <span className="sr-only">Error</span>404
                         </h2>
                         <p className="text-2xl font-semibold md:text-3xl">Sorry, we could not find this page.</p>
-                        {/* <p className="mt-4 mb-8 dark:text-gray-600">But dont worry, you can find plenty of other things on our homepage.</p> */}
                         <p className=" font-bold text-center mt-4 mb-8">
                             <i>{error.statusText || error.message}</i> <br />
                         </p>
                         <p>
                             <i>{error.data}</i>
                         </p>
-                       <Link to ="/"> <button className="btn px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Back to Homepage</button></Link>
+                       <Link to ="/"> <button className="btn px-8 mt-4 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Back to Homepage</button></Link>
                     </div>
                 </div>
             </section>
