@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
-        <div className="bg-base-300 flex justify-center p-8">
+        <div className="bg-base-300 flex justify-center p-4">
             <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800 bg-purple-200">
                 <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
                 <p className="text-sm text-center dark:text-gray-600">Dont have account? <Link to ='/register'><span className="text-blue-600 font-bold">Register</span> here.</Link>
@@ -37,7 +37,7 @@ const Login = () => {
                                 <label htmlFor="password" className="text-sm">Password</label>
                                 <a rel="noopener noreferrer" href="" className="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
                             </div>
-                            <input type="password" name="password" id="password" placeholder="*****" className="input w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            <input type="password" name="password" id="password" placeholder="**********" className="input w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                         </div>
                     </div>
                     <button type="submit" className="btn bg-purple-500 hover:bg-purple-400 border-none w-full px-8 py-3 text-xl font-bold rounded-md dark:bg-violet-600 dark:text-gray-50">Login</button>
