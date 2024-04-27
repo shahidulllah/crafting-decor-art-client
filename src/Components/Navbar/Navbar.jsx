@@ -15,7 +15,7 @@ const Navbar = () => {
     const navlinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/all'>All Art & Craft Items</NavLink></li>
-        <li><NavLink to='/addItem'>Add Craft Item</NavLink></li>
+        <li><NavLink to='/addItmeForm'>Add Craft Item</NavLink></li>
         <li><NavLink to='/myList'>My Art & Craft List</NavLink></li>
     </>
     return (
