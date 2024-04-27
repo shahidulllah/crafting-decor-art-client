@@ -14,15 +14,15 @@ const Navbar = () => {
 
     const navlinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/all'>All Items</NavLink></li>
+        <li><NavLink to='/all'>All Art & Craft Items</NavLink></li>
         <li><NavLink to='/addItem'>Add Craft Item</NavLink></li>
-        <li><NavLink to='/myList'>My List</NavLink></li>
+        <li><NavLink to='/myList'>My Art & Craft List</NavLink></li>
     </>
     return (
-        <div className=" bg-purple-300 h-full">
+        <div className=" bg-purple-400 h-full">
             <div className="text-center p-4 lg:mx-24">
                 <header className="p-3 dark:bg-gray-100 dark:text-gray-800">
-                    <div className="container flex justify-between h-16 mx-auto">
+                    <div className="container flex justify-between h-12 mx-auto">
                         <div className="flex items-center">
                             <Link to='/'><img src="https://i.postimg.cc/RVQBjndr/logo-1.png" alt="" /></Link>
                         </div>
@@ -33,14 +33,14 @@ const Navbar = () => {
                         </div>
                         <div className="items-center flex-shrink-0 hidden lg:flex">
                             {
-                                !user && <Link to='/login'> <button className="self-center px-8 py-3 rounded">Login</button></Link>
+                                !user && <NavLink to='/login'> <button className="self-center btn-ghost px-3 py-1 mr-4 font-semibold rounded">Login</button></NavLink>
                             }
 
 
                             <div className="dropdown dropdown-end">
                                 <div tabIndex={0} role="butto" className="btn btn-ghost btn-circle">
                                     <div className="w-12 tooltip" data-tip={user?.displayName || 'User Logged out'}>
-                                        <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" className="rounded-full" alt="" />
+                                        <img src={ user?.photoURL ||"https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"} className="rounded-full" alt="" />
                                     </div>
                                 </div>
                                 {

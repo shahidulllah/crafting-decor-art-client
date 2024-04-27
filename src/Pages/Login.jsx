@@ -28,7 +28,6 @@ const Login = () => {
                 console.log(result.user);
                 // setLoginSuccess("Login Successfull..!")
                 Swal.fire("Login Successfull..!");
-                form.reset();
                 navigate(location?.state ? location.state : '/');
                 form.reset()
             })
