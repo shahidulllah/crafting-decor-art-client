@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div data-aos="zoom-in" data-aos-duration="2000" className="border-2 p-5 lg:p-16 mt-7 bg-black text-white">
-            <footer className="footer flex justify-center ">
+            <footer className="footer flex justify-center lg:mx-24 ">
                 <div className=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10">
                     <aside className="lg:row-span-2 col-span-2 md:col-span-4 lg:col-span-1 mb-6 flex flex-col justify-center space-y-2 h-full">
                         <div className="flex items-center mb-3">
                             <Link to='/'><img src="https://i.postimg.cc/QN5LLWm8/footer-logo.png" alt="" /></Link>
                         </div>
-                        <p>CDA Industries Ltd.<br />Providing reliable house since 2015</p>
+                        <p>CDA Industries Ltd.<br />Your trusted Art and Craft Center.</p>
                     </aside>
                     <nav className="flex flex-col gap-2">
                         <h6 className="footer-title">Services</h6>
@@ -49,7 +49,7 @@ const Footer = () => {
             <div>
                 <footer className="footer footer-center mt-20 -mb-3 lg:-mb-12">
                     <aside>
-                        <p>Copyright © 2024 - All right reserved by REHC  Industries Ltd</p>
+                        <p>Copyright © 2024 - All right reserved by CDA  Industries Ltd.</p>
                     </aside>
                 </footer>
             </div>

@@ -1,7 +1,16 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => console.log('User Logged out'))
+            .catch(error => console.error(error))
+    }
 
     const navlinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
@@ -23,13 +32,40 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className="items-center flex-shrink-0 hidden lg:flex">
-                            <Link to='/login'> <button className="self-center px-8 py-3 rounded">Login</button></Link>
-                            <div className="w-12 tooltip" data-tip="User info">
-                                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" className="rounded-full" alt="" />
+                            {
+                                !user && <Link to='/login'> <button className="self-center px-8 py-3 rounded">Login</button></Link>
+                            }
+
+
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="butto" className="btn btn-ghost btn-circle">
+                                    <div className="w-12 tooltip" data-tip={user?.displayName || 'User Logged out'}>
+                                        <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" className="rounded-full" alt="" />
+                                    </div>
+                                </div>
+                                {
+                                    user && <ul tabIndex={0} className=" z-[1] p-4 bg-slate-300 shadow menu menu-sm dropdown-content rounded-box -ml-44 lg:-ml-24 ">
+                                    <div className="flex flex-col items-center justify-center">
+                                        <div className=" w-9 mb-2 ">
+                                            <img className="rounded-full" src={user?.photoURL || "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"} />
+                                        </div>
+                                        <div className="text-center font-serif">
+                                            <h1 className="font-semibold">{user?.displayName}</h1>
+                                            {
+                                                user && <h2 className="text-sm">{user?.email || 'Email not found!'}</h2>
+                                            }
+
+                                        </div>
+                                    </div>
+                                    <div className="mt-5 border-y space-y-2">
+                                        <li><Link to='/'>Update Profile</Link></li>
+                                        <li><button onClick={handleLogOut}>Log Out</button></li>
+                                    </div>
+                                </ul>
+                            }
+                                
                             </div>
-                            {/* <div className="tooltip" data-tip="hello">
-                                <button className="btn">Hover me</button>
-                            </div> */}
+
                         </div>
                         <button className="p-4 lg:hidden">
                             <div className="dropdown dropdown-end">
