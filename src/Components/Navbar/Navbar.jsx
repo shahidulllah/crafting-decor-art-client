@@ -74,8 +74,12 @@ const Navbar = () => {
                                 </svg></div>
                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     {navlinks}
-                                    <li><Link to="/login">Login</Link></li>
-                                    <li><Link to="/login">Register</Link></li>
+                                    {
+                                        !user &&  <li><Link to="/login">Login</Link></li> ||
+                                        <li><button onClick={handleLogOut}>Log Out</button></li>
+                                    }
+                                   
+                                   
                                 </ul>
                             </div>
                         </button>
