@@ -1,12 +1,49 @@
 
+import { useState } from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { RiColorFilterLine } from "react-icons/ri";
 import { VscDebugBreakpointData } from "react-icons/vsc";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyCardList = () => {
     const items = useLoaderData();
+
+    const [myItems, setMyItems]= useState(items)
+    const handleDelete = id => {
+        console.log(id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:2000/userItem/${id}`, {
+                    method: 'DELETE',
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                              Swal.fire({
+                                title: "Success!",
+                                text: "Your Item has been seccessfully deleted.",
+                                icon: "success"
+                              });
+
+                              const remaining = items.filter(Item => Item._id !== id);
+                              setMyItems(remaining);
+                        }
+                    })
+            }
+        });
+    }
     return (
         <div className="bg-purple-200">
             <div className="flex justify-center items-center pt-10">
@@ -20,7 +57,7 @@ const MyCardList = () => {
             </div>
             <div className="grid grid-cols-1 gap-14 p-4 lg:p-12 lg:mx-24">
                 {
-                    items.map(item =>
+                    myItems.map(item =>
                         <div key={item._id} data-aos="zoom-in" data-aos-duration="2000" className="flex justify-center">
                             <div className="9/12 bg-blue-100 rounded-xl flex flex-grow  shadow-2xl">
 
@@ -61,7 +98,7 @@ const MyCardList = () => {
                                         </div>
                                         <div className="flex justify-end gap-5 mt-7">
                                             <button className="btn font-extrabold"><span><MdEdit className="text-xl"></MdEdit></span>Update</button>
-                                            <button className="btn font-extrabold"><span><MdDelete className="text-xl"></MdDelete></span>Delete</button>
+                                            <button onClick={() => handleDelete(item._id)} className="btn font-extrabold"><span><MdDelete className="text-xl"></MdDelete></span>Delete</button>
                                         </div>
                                     </div>
 
