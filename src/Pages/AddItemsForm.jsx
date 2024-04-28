@@ -103,7 +103,7 @@ const AddItemsForm = () => {
                             </div>
                             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-6 mt-12">
                                 <div className="w-full shadow-lg col-span-6">
-                                    <button type="submit" className="btn btn-success shadow-lg w-full">Add</button>
+                                    <button type="submit" className="btn bg-purple-400 border-none shadow-lg w-full font-bold text-lg">Add</button>
                                 </div>
                             </div>
                         </div>

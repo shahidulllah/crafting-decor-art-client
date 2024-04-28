@@ -1,5 +1,6 @@
 
-import { MdDelete } from "react-icons/md";
+import { MdDelete, MdEdit } from "react-icons/md";
+import { RiColorFilterLine } from "react-icons/ri";
 import { VscDebugBreakpointData } from "react-icons/vsc";
 import { useLoaderData } from "react-router-dom";
 
@@ -8,16 +9,25 @@ const MyCardList = () => {
     const items = useLoaderData();
     return (
         <div className="bg-purple-200">
+            <div className="flex justify-center items-center pt-10">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn bg-blue-200 shadow-lg border-none w-44 text-xl"><span><RiColorFilterLine /></span> Filter</div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu shadow bg-purple-100 rounded-box w-32 mt-1 text-xl ml-6">
+                        <li className="border-b-2"><a>Yes</a></li>
+                        <li><a>No</a></li>
+                    </ul>
+                </div>
+            </div>
             <div className="grid grid-cols-1 gap-14 p-4 lg:p-12 lg:mx-24">
                 {
                     items.map(item =>
-                        <div key={item._id} data-aos="zoom-in" data-aos-duration="2000" className="flex justify-center rounded-xl ">
-                            <div className="9/12 ">
+                        <div key={item._id} data-aos="zoom-in" data-aos-duration="2000" className="flex justify-center">
+                            <div className="9/12 bg-blue-100 rounded-xl flex flex-grow  shadow-2xl">
 
                                 {/* image */}
-                                <div className="flex flex-col lg:flex lg:flex-row border items-center justify-center gap-7 shadow-xl p-4 rounded-lg lg:p-9"><img className="  rounded-lg h-[60vh]" src={item.imageUrl} alt="" />
+                                <div className="flex flex-col lg:flex lg:flex-row border items-center justify-center gap-7 p-4 rounded-lg lg:p-9"><img className="  rounded-lg h-[60vh]" src={item.imageUrl} alt="" />
                                     <div className="">
-                                        <div className="bg-purple-100git p-5 mb-6 rounded-xl">
+                                        <div className="bg-purple-100 p-5 mb-6 rounded-xl">
                                             <p className="text-center text-purple-800 text-3xl font-extrabold">{item.itemName}</p>
 
                                         </div>
@@ -47,11 +57,11 @@ const MyCardList = () => {
                                         </div>
                                         <div className="text-start flex ml-12 gap-3 mt-3 items-center">
                                             <div className="flex items-center gap-1"><VscDebugBreakpointData className="text-xl" /> <p className="font-bold">Stock Status: </p></div>
-                                            <div><p>{item.stockStutus}</p></div>
+                                            <div><p className="text-green-500 font-bold">{item.stockStutus}</p></div>
                                         </div>
                                         <div className="flex justify-end gap-5 mt-7">
-                                            <button className="btn"><MdDelete></MdDelete>Update</button>
-                                            <button className="btn">Delete</button>
+                                            <button className="btn font-extrabold"><span><MdEdit className="text-xl"></MdEdit></span>Update</button>
+                                            <button className="btn font-extrabold"><span><MdDelete className="text-xl"></MdDelete></span>Delete</button>
                                         </div>
                                     </div>
 

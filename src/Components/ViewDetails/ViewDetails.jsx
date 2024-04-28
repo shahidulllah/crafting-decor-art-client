@@ -15,7 +15,7 @@ const ViewDetails = () => {
                     {/* image */}
                     <div className="flex flex-col lg:flex lg:flex-row border items-center justify-center gap-12 shadow-xl p-4 rounded-lg lg:p-9"><img className="  rounded-lg h-[60vh]" src={detailsItem.imageUrl} alt="" />
                         <div className="">
-                            <div className="bg-white p-5 mb-6 rounded-xl">
+                            <div className="bg-purple-100 p-5 mb-6 rounded-xl">
                                 <p className="text-center text-purple-800 text-3xl font-extrabold">{detailsItem.itemName}</p>
 
                             </div>
