@@ -10,6 +10,7 @@ import AddItemsForm from "./Pages/AddItemsForm";
 import ViewDetails from "./Components/ViewDetails/ViewDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import MyCardList from "./Pages/MyCardList";
+import UpdatePage from "./Pages/UpdatePage";
 
 
  export const router = createBrowserRouter([
@@ -33,6 +34,11 @@ import MyCardList from "./Pages/MyCardList";
         {
             path: "/addItmeForm",
             element: <PrivateRoute><AddItemsForm></AddItemsForm></PrivateRoute>
+        },
+        {
+            path: "/updateForm/:id",
+            element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:2000/userItem/${params.id}`)
         },
         {
             path: "/viewDetails/:id",

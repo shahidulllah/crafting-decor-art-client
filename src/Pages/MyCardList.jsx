@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { RiColorFilterLine } from "react-icons/ri";
 import { VscDebugBreakpointData } from "react-icons/vsc";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -59,7 +59,7 @@ const MyCardList = () => {
                 {
                     myItems.map(item =>
                         <div key={item._id} data-aos="zoom-in" data-aos-duration="2000" className="flex justify-center">
-                            <div className="9/12 bg-blue-100 rounded-xl flex flex-grow  shadow-2xl">
+                            <div className="9/12 bg-blue-100 rounded-xl   shadow-2xl">
 
                                 {/* image */}
                                 <div className="flex flex-col lg:flex lg:flex-row border items-center justify-center gap-7 p-4 rounded-lg lg:p-9"><img className="  rounded-lg h-[60vh]" src={item.imageUrl} alt="" />
@@ -97,7 +97,7 @@ const MyCardList = () => {
                                             <div><p className="text-green-500 font-bold">{item.stockStutus}</p></div>
                                         </div>
                                         <div className="flex justify-end gap-5 mt-7">
-                                            <button className="btn font-extrabold"><span><MdEdit className="text-xl"></MdEdit></span>Update</button>
+                                           <Link to={`/updateForm/${item._id}`}> <button className="btn font-extrabold"><span><MdEdit className="text-xl"></MdEdit></span>Update</button></Link>
                                             <button onClick={() => handleDelete(item._id)} className="btn font-extrabold"><span><MdDelete className="text-xl"></MdDelete></span>Delete</button>
                                         </div>
                                     </div>
