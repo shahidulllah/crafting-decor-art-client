@@ -9,6 +9,7 @@ import Register from "./Pages/Register";
 import AddItemsForm from "./Pages/AddItemsForm";
 import ViewDetails from "./Components/ViewDetails/ViewDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import MyCardList from "./Pages/MyCardList";
 
 
  export const router = createBrowserRouter([
@@ -31,11 +32,16 @@ import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
         },
         {
             path: "/addItmeForm",
-            element: <AddItemsForm></AddItemsForm>
+            element: <PrivateRoute><AddItemsForm></AddItemsForm></PrivateRoute>
         },
         {
             path: "/viewDetails/:id",
             element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+            loader: ()=> fetch('http://localhost:2000/userItem')
+        },
+        {
+            path: "/myCard",
+            element: <PrivateRoute><MyCardList></MyCardList></PrivateRoute>,
             loader: ()=> fetch('http://localhost:2000/userItem')
         },
       ]

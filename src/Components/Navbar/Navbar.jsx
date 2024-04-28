@@ -16,10 +16,10 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/all'>All Art & Craft Items</NavLink></li>
         <li><NavLink to='/addItmeForm'>Add Craft Item</NavLink></li>
-        <li><NavLink to='/myList'>My Art & Craft List</NavLink></li>
+        <li><NavLink to='/myCard'>My Art & Craft List</NavLink></li>
     </>
     return (
-        <div className=" bg-purple-400 h-full">
+        <div className=" bg-purple-400 sticky z-50 w-full top-0">
             <div className="text-center p-4 lg:mx-24">
                 <header className="p-3 dark:bg-gray-100 dark:text-gray-800">
                     <div className="container flex justify-between h-12 mx-auto">
