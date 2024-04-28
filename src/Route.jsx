@@ -8,6 +8,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import AddItemsForm from "./Pages/AddItemsForm";
 import ViewDetails from "./Components/ViewDetails/ViewDetails";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 
  export const router = createBrowserRouter([
@@ -34,7 +35,7 @@ import ViewDetails from "./Components/ViewDetails/ViewDetails";
         },
         {
             path: "/viewDetails/:id",
-            element: <ViewDetails></ViewDetails>,
+            element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
             loader: ()=> fetch('http://localhost:2000/userItem')
         },
       ]

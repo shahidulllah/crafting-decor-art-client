@@ -1,8 +1,3 @@
-
-import { AiOutlineBug } from "react-icons/ai";
-import { GiShower } from "react-icons/gi";
-import { IoBedOutline } from "react-icons/io5";
-import { TbArrowsRandom } from "react-icons/tb";
 import { VscDebugBreakpointData } from "react-icons/vsc";
 import { useLoaderData, useParams } from "react-router-dom";
 
