@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const UpdatePage = () => {
     const item = useLoaderData();
     console.log(item)
-    const {_id, stockStutus, processingTime, customization, rating, price, description, subCategory, itemName, imageUrl } = item;
+    const {_id, stockStatus, processingTime, customization, rating, price, description, subCategory, itemName, imageUrl } = item;
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -44,7 +44,7 @@ const UpdatePage = () => {
                         icon: 'success',
                         confirmButtonText: 'Done'
                     })
-                    navigate(location?.state ? location.state : '/');
+                    navigate(location?.state ? location.state : '/myCard');
                 }
             })
     }
@@ -90,11 +90,17 @@ const UpdatePage = () => {
                             </div>
                             <div className="col-span-full sm:col-span-1">
                                 <label htmlFor="username" className="text-sm">Stock Status</label>
-                                <input name="stockStatus" type="text" defaultValue={stockStutus} placeholder="Instock / Made order" className="w-full input rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required />
+                                <select className="py-3 px-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" defaultValue={stockStatus} name="stockStatus" id="cars">
+                                        <option value="instock">In Stock</option>
+                                        <option value="made-order">Made Order</option>
+                                    </select>
                             </div>
                             <div className="col-span-full sm:col-span-1">
                                 <label htmlFor="state" className="text-sm">Customization</label>
-                                <input name="customization" type="text" defaultValue={customization} placeholder="Yes / No" className="w-full rounded-md input focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required />
+                                <select className="py-3 px-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" defaultValue={customization} name="customization" id="cars">
+                                        <option  value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
                             </div>
 
                             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-6 mt-12">
