@@ -9,10 +9,9 @@ import Swal from "sweetalert2";
 
 const MyCardList = () => {
     const items = useLoaderData();
-
-    const [myItems, setMyItems]= useState(items)
+    const [myItems, setMyItems]= useState(items);
+    
     const handleDelete = id => {
-        console.log(id);
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -44,6 +43,7 @@ const MyCardList = () => {
             }
         });
     }
+  
     return (
         <div className="bg-purple-200">
             <div className="flex justify-center items-center pt-10">
@@ -94,7 +94,7 @@ const MyCardList = () => {
                                         </div>
                                         <div className="text-start flex ml-12 gap-3 mt-3 items-center">
                                             <div className="flex items-center gap-1"><VscDebugBreakpointData className="text-xl" /> <p className="font-bold">Stock Status: </p></div>
-                                            <div><p className="text-green-500 font-bold">{item.stockStutus}</p></div>
+                                            <div><p className="text-green-500 font-bold">{item.stockStatus}</p></div>
                                         </div>
                                         <div className="flex justify-end gap-5 mt-7">
                                            <Link to={`/updateForm/${item._id}`}> <button className="btn font-extrabold"><span><MdEdit className="text-xl"></MdEdit></span>Update</button></Link>

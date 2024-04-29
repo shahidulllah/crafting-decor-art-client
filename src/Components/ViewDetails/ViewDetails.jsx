@@ -45,7 +45,7 @@ const ViewDetails = () => {
                             </div>
                             <div className="text-start flex ml-12 gap-3 mt-3 items-center">
                                <div className="flex items-center gap-1"><VscDebugBreakpointData className="text-xl" /> <p className="font-bold">Stock Status: </p></div>
-                                <div><p>{detailsItem.stockStutus}</p></div>
+                                <div><p className="bg-green-600 text-white px-1 rounded-md font-bold ">{detailsItem.stockStatus}</p></div>
                             </div>
                             <div className="text-start flex ml-12 gap-3 mt-3 items-center">
                                <div className="flex items-center gap-1"><VscDebugBreakpointData className="text-xl" /> <p className="font-bold">User: </p></div>
