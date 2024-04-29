@@ -8,7 +8,7 @@ import { TbListDetails } from 'react-icons/tb';
 const Card = ({ item }) => {
 
     return (
-        <div className="max-w-sm rounded-2xl shadow-2xl dark:bg-gray-50 dark:text-gray-800 border-2 ">
+        <div className="rounded-2xl shadow-2xl dark:bg-gray-50 dark:text-gray-800 border-2 ">
             <img src={item.imageUrl} alt="" className="object-cover object-center w-full rounded-t-md h-96 dark:bg-gray-500" />
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">

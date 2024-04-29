@@ -14,10 +14,10 @@ const CraftItemCard = () => {
     },[])
 
     return (
-        <div className=" bg-purple-200 -mt-2">
+        <div className=" bg-purple-200">
             <div className=" p-4 lg:mx-24">
                 {/* Upper part */}
-                <div className="flex flex-col items-center justify-center p-16 space-y-5">
+                <div className="flex flex-col items-center justify-center p-16 pb-10 pt-24 space-y-5">
                     <h1 className="text-4xl lg:text-5xl font-bold text-center">Our Exclusive Collections</h1>
                     <p className="text-center lg:w-4/12">Most interesting part to have the fresh mind by keeping our product. Art and Craft is the way to live and refresh your mind.</p>
                 </div>

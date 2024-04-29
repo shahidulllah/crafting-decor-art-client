@@ -24,7 +24,7 @@ const UpdatePage = () => {
         const stockStutus = form.stockStutus.value;
 
         const userItems = { stockStutus, processingTime, customization, rating, price, description, subCategory, itemName, imageUrl }
-        console.log(userItems);
+        // console.log(userItems);
 
         //Update data 
         fetch(`http://localhost:2000/userItem/${_id}`, {
@@ -44,7 +44,7 @@ const UpdatePage = () => {
                         icon: 'success',
                         confirmButtonText: 'Done'
                     })
-                    navigate(location?.state ? location.state : '/myCard');
+                    navigate(location?.state ? location.state : '/');
                 }
             })
     }
