@@ -21,9 +21,9 @@ const UpdatePage = () => {
         const rating = form.rating.value;
         const customization = form.customization.value;
         const processingTime = form.processingTime.value;
-        const stockStutus = form.stockStutus.value;
+        const stockStatus = form.stockStatus.value;
 
-        const userItems = { stockStutus, processingTime, customization, rating, price, description, subCategory, itemName, imageUrl }
+        const userItems = { stockStatus, processingTime, customization, rating, price, description, subCategory, itemName, imageUrl }
         // console.log(userItems);
 
         //Update data 
@@ -90,7 +90,7 @@ const UpdatePage = () => {
                             </div>
                             <div className="col-span-full sm:col-span-1">
                                 <label htmlFor="username" className="text-sm">Stock Status</label>
-                                <input name="stockStutus" type="text" defaultValue={stockStutus} placeholder="Instock / Made order" className="w-full input rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required />
+                                <input name="stockStatus" type="text" defaultValue={stockStutus} placeholder="Instock / Made order" className="w-full input rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" required />
                             </div>
                             <div className="col-span-full sm:col-span-1">
                                 <label htmlFor="state" className="text-sm">Customization</label>
