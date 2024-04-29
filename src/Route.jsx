@@ -11,6 +11,7 @@ import ViewDetails from "./Components/ViewDetails/ViewDetails";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import MyCardList from "./Pages/MyCardList";
 import UpdatePage from "./Pages/UpdatePage";
+import AllCraft from "./Pages/AllCraft";
 
 
  export const router = createBrowserRouter([
@@ -32,7 +33,7 @@ import UpdatePage from "./Pages/UpdatePage";
             element: <Register></Register>
         },
         {
-            path: "/addItmeForm",
+            path: "/addItemForm",
             element: <PrivateRoute><AddItemsForm></AddItemsForm></PrivateRoute>
         },
         {
@@ -48,6 +49,11 @@ import UpdatePage from "./Pages/UpdatePage";
         {
             path: "/myCard",
             element: <PrivateRoute><MyCardList></MyCardList></PrivateRoute>,
+            loader: ()=> fetch('http://localhost:2000/userItem')
+        },
+        {
+            path: "/allCraft",
+            element: <AllCraft></AllCraft>,
             loader: ()=> fetch('http://localhost:2000/userItem')
         },
       ]

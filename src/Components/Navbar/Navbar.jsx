@@ -30,20 +30,20 @@ const Navbar = () => {
 
     const navlinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/all'>All Art & Craft Items</NavLink></li>
-        <li><NavLink to='/addItmeForm'>Add Craft Item</NavLink></li>
+        <li><NavLink to='/allCraft'>All Art & Craft Items</NavLink></li>
+        <li><NavLink to='/addItemForm'>Add Craft Item</NavLink></li>
         <li><NavLink to='/myCard'>My Art & Craft List</NavLink></li>
     </>
     return (
         <div className=" bg-purple-400 sticky z-50 w-full top-0">
             <div className="text-center p-4 lg:mx-24">
-                <header className="p-3 dark:bg-gray-100 dark:text-gray-800">
+                <header className="p-3">
                     <div className="container flex justify-between h-12 mx-auto">
                         <div className="flex items-center">
                             <Link to='/'><img src="https://i.postimg.cc/RVQBjndr/logo-1.png" alt="" /></Link>
                         </div>
                         <div className="navbar-center hidden lg:flex  justify-center">
-                            <ul className="menu menu-horizontal  flex gap-7 items-center font-bold">
+                            <ul className="menu menu-horizontal flex gap-7 items-center font-bold">
                                 {navlinks}
                             </ul>
                         </div>

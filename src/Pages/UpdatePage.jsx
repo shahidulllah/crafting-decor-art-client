@@ -55,8 +55,8 @@ const UpdatePage = () => {
                 <form onSubmit={handleUpdate} noValidate="" action="" className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md">
                         <div className="space-y-7 p-3 col-span-full lg:col-span-1 flex flex-col justify-center">
-                            <p className="font-extrabold text-3xl lg:text-5xl text-center">Add Your Favourite Craft Items</p>
-                            <p className=" text-center">Here is your item that you explore for your Craft item and order them.</p>
+                            <p className="font-extrabold text-3xl lg:text-5xl text-center">Update Your Favourite Craft Items</p>
+                            
                         </div>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 p-4 lg:p-12 shadow-2xl border rounded">
                             <div className="col-span-full sm:col-span-3">
