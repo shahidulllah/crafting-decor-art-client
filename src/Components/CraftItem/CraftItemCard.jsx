@@ -5,7 +5,7 @@ import Card from "./Card";
 const CraftItemCard = () => {
     const [items, setItems] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:2000/userItem')
+        fetch('https://ass10-crafting-decor-art-server-42cpjro4i-shahidullahs-projects.vercel.app/userItem')
         .then(res=> res.json())
         .then(data =>{
             console.log(data);
