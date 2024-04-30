@@ -26,7 +26,7 @@ const AddItemsForm = () => {
 
 
         //send data to the server
-        fetch('http://localhost:2000/userItem', {
+        fetch('https://ass10-crafting-decor-art-server.vercel.app/userItem', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

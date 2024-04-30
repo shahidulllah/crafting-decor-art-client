@@ -11,13 +11,13 @@ const AllCraft = () => {
                     <h1 className="text-4xl lg:text-5xl font-bold text-center"><u>All Items Is Here</u></h1>
                 </div>
                 <div className="flex justify-center">
-                    <table className="table bg-purple-300 w-10/12">
+                    <table className="table bg-purple-300  lg:w-10/12">
                         {/* head */}
                         <thead className="text-sm shadow-lg bg-gray-200">
                             <tr className="text-center">
-                                <th className="flex flex-wrap">Category Name/ <span className="opacity-60 badge badge-sm">Sub-Category</span></th>
+                                <th className="flex flex-wrap items-center gap-1">Category Name/ <span className="opacity-60 badge badge-sm">Sub-Category</span></th>
                                 <th>Price</th>
-                                <th>Rating</th>
+                                <th className="hidden lg:flex">Rating</th>
                                 <th>Stock Status</th>
                                 <th>Details</th>
                             </tr>
@@ -34,7 +34,7 @@ const AllCraft = () => {
                                         </div>
                                     </td>
                                     <td className="font-bold text-center">{item.price} $</td>
-                                    <td className="font-bold text-center">{item.rating} / 5</td>
+                                    <td className="font-bold text-center hidden lg:block">{item.rating} / 5</td>
                                     <td className="text-center w-12"><span className="bg-green-300 font-semibold px- rounded-lg flex justify-center">{item.stockStatus}</span></td>
                                     <th className="text-center">
                                         <Link to={`/viewDetails/${item._id}`}> <button className="btn  btn-xs">details</button></Link>

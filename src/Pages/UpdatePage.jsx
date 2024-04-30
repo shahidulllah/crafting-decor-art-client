@@ -27,7 +27,7 @@ const UpdatePage = () => {
         // console.log(userItems);
 
         //Update data 
-        fetch(`http://localhost:2000/userItem/${_id}`, {
+        fetch(`https://ass10-crafting-decor-art-server.vercel.app/userItem/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

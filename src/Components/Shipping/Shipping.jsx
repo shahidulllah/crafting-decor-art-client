@@ -7,7 +7,7 @@ const Shipping = () => {
     return (
         <div className="bg-purple-200 -mt-2">
             <div className="p-4 lg:mx-24">
-                <div className="p-20 grid justify-center grid-cols-2 lg:grid-cols-4 gap-9 ">
+                <div className=" p-4 lg:p-20 grid justify-center grid-cols-2 lg:grid-cols-4 gap-9 ">
                     <div className="flex flex-col justify-center items-center space-y-1 border-r-2 ">
                         <h1 className="text-7xl"><LiaShippingFastSolid /></h1>
                         <h2 className="font-semibold text-xl mt-2 -tracking-wide">Free Shipping</h2>
@@ -31,7 +31,7 @@ const Shipping = () => {
                 </div>
 
                 {/* Banner */}
-                <div className="flex gap-7">
+                <div className="p-4 grid lg:grid-cols-3 gap-7">
                     <div><img src="https://i.postimg.cc/7L96kLLx/banner-01.jpg" alt="" /></div>
                     <div><img src="https://i.postimg.cc/1tzz5ZgD/banner-02.jpg" alt="" /></div>
                     <div><img src="https://i.postimg.cc/ydr8Dr9t/banner-03.jpg" alt="" /></div>
