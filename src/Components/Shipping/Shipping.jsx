@@ -31,10 +31,10 @@ const Shipping = () => {
                 </div>
 
                 {/* Banner */}
-                <div className="p-4 grid lg:grid-cols-3 gap-7">
-                    <div><img src="https://i.postimg.cc/7L96kLLx/banner-01.jpg" alt="" /></div>
+                <div className="lg:flex space-y-3 lg:space-y-0 gap-6">
+                    <div ><img src="https://i.postimg.cc/7L96kLLx/banner-01.jpg" alt="" /></div>
                     <div><img src="https://i.postimg.cc/1tzz5ZgD/banner-02.jpg" alt="" /></div>
-                    <div><img src="https://i.postimg.cc/ydr8Dr9t/banner-03.jpg" alt="" /></div>
+                    <div className="flex justify-center"><img src="https://i.postimg.cc/ydr8Dr9t/banner-03.jpg" alt="" /></div>
                 </div>
             </div>
         </div>
