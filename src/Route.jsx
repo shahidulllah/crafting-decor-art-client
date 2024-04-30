@@ -39,22 +39,22 @@ import AllCraft from "./Pages/AllCraft";
         {
             path: "/updateForm/:id",
             element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
-            loader: ({params}) => fetch(`https://ass10-crafting-decor-art-server-42cpjro4i-shahidullahs-projects.vercel.app/userItem/${params.id}`)
+            loader: ({params}) => fetch(`https://ass10-crafting-decor-art-server.vercel.app/userItem/${params.id}`)
         },
         {
             path: "/viewDetails/:id",
             element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-            loader: ()=> fetch('https://ass10-crafting-decor-art-server-42cpjro4i-shahidullahs-projects.vercel.app/userItem')
+            loader: ()=> fetch('https://ass10-crafting-decor-art-server.vercel.app/userItem')
         },
         {
             path: "/myCard",
             element: <PrivateRoute><MyCardList></MyCardList></PrivateRoute>,
-            loader: ()=> fetch('https://ass10-crafting-decor-art-server-42cpjro4i-shahidullahs-projects.vercel.app/userItem')
+            loader: ()=> fetch('https://ass10-crafting-decor-art-server.vercel.app/userItem')
         },
         {
             path: "/allCraft",
             element: <AllCraft></AllCraft>,
-            loader: ()=> fetch('https://ass10-crafting-decor-art-server-42cpjro4i-shahidullahs-projects.vercel.app/userItem')
+            loader: ()=> fetch('https://ass10-crafting-decor-art-server.vercel.app/userItem')
         },
       ]
     }
