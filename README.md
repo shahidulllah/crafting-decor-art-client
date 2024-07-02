@@ -1,22 +1,22 @@
-# Medicare
+# Crafting Decor Art
 
 ## Project Overview
 
-Medicare is a web application designed to provide users with convenient access to healthcare services. It offers features such as appointment booking, medical history tracking, and healthcare provider information.
+Crafting Decor Art is a web application designed to provide users with a platform to explore, create, and share decorative art and craft projects. The application aims to inspire creativity and offer a community for craft enthusiasts.
 
 ### Live Link
-- [Medicare Application](https://ass12-medicare.web.app)
+- [Crafting Decor Art Application](https://crafting-decor-art.web.app)
 
 ### GitHub Repositories
-- [Client Repository](https://github.com/shahidulllah/medicare-client)
-- [Server Repository](https://github.com/shahidulllah/medicare-server)
+- [Client Repository](https://github.com/shahidulllah/crafting-decor-art-client)
+- [Server Repository](https://github.com/shahidulllah/crafting-decor-art-server)
 
 ## Features
 
 - User authentication and authorization
-- Appointment booking with healthcare providers
-- Medical history tracking
-- Search and filter for healthcare providers
+- Browse and search for craft projects
+- Create and share your own craft projects
+- Comment and interact with other users' projects
 - Responsive design for seamless use on various devices
 
 ## Technologies Used
@@ -33,10 +33,3 @@ Medicare is a web application designed to provide users with convenient access t
 - npm (Node Package Manager)
 - MongoDB
 
-### Setup
-
-#### Clone the repositories:
-
-```bash
-git clone https://github.com/shahidulllah/medicare-client
-git clone https://github.com/shahidulllah/medicare-server
