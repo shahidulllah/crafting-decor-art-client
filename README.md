@@ -1,8 +1,35 @@
-# React + Vite
+# Crafting Decor Art
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+Crafting Decor Art is a web application designed to provide users with a platform to explore, create, and share decorative art and craft projects. The application aims to inspire creativity and offer a community for craft enthusiasts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Live Link
+- [Crafting Decor Art Application](https://crafting-decor-art.web.app)
+
+### GitHub Repositories
+- [Client Repository](https://github.com/shahidulllah/crafting-decor-art-client)
+- [Server Repository](https://github.com/shahidulllah/crafting-decor-art-server)
+
+## Features
+
+- User authentication and authorization
+- Browse and search for craft projects
+- Create and share your own craft projects
+- Comment and interact with other users' projects
+- Responsive design for seamless use on various devices
+
+## Technologies Used
+
+- **Frontend:** HTML, CSS, Tailwind, JavaScript, React
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
+
+## Installation
+
+### Prerequisites
+
+- Node.js
+- npm (Node Package Manager)
+- MongoDB
+
