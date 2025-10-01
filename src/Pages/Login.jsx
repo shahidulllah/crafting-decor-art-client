@@ -19,21 +19,21 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
-        // setLoginError('');
-        // setLoginSuccess('');
+        setLoginError('');
+        setLoginSuccess('');
 
         // Login Authentication
         loginUser(email, password)
             .then(result => {
                 console.log(result.user);
-                // setLoginSuccess("Login Successfull..!")
+                setLoginSuccess("Login Successfull..!")
                 Swal.fire("Login Successfull..!");
                 navigate(location?.state ? location.state : '/');
                 form.reset()
             })
             .catch(error => {
                 console.log(error.message);
-                // setLoginError('Email and password is not correct..!');
+                setLoginError('Email and password is not correct..!');
                 Swal.fire({
                     icon: "error",
                     title: "Oops...",
